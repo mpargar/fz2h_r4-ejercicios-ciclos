@@ -10,27 +10,19 @@ int main()
   cin >> n;
   cout << "Ingrese el valor de m: ";
   cin >> m;
-  // TODO: Explicar que chingados es un ternario y aplicarlo aquí
-  if (n < m)
-  {
-    valorInicial = n;
-    valorFinal = m;
-  }
-  else if (n > m)
-  {
-    valorInicial = m;
-    valorFinal = n;
-  }
-  else
+
+  if (n == m)
   {
     cout << "Los números son iguales";
     return 1;
   }
+
+  // Operador ternario
+  valorInicial = (n < m ? n : m);
+  valorFinal = (n < m ? m : n);
+
   cout << "Los números entre " << n << " y " << m << " son: " << endl;
-  // for (int i = valorInicial + 1; i < valorFinal; i++)
-  // {
-  //   cout << i << " ";
-  // }
+
   while (valorInicial < valorFinal - 1)
   {
     valorInicial++;
